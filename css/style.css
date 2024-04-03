@@ -1,150 +1,206 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+.container {
     font-family: 'Lato', sans-serif;
-    line-height: 2;
+    margin: 0 auto;
+    width: 75%;
     text-align: center;
-}
-
-.intro-image{
-    background-attachment: fixed;
-    background-image: url('../img/img_1.jpg');
-    background-size: cover;
-    background-position: bottom;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.intro-image__text a{
-    background-color: #412d0950;
-    border: 2px solid #ba6515ad;
-    color: rgb(183, 165, 151);
-    display: inline-block;
-    font-size: 3rem;
-    padding: 2rem;
-    text-decoration: none;  
-    text-transform: uppercase;
-    transition: all 0.5s ease-in-out
-}
-
-.intro-image__text a:hover{
-    transform: scale(1.2);
-}
-
-.intro-text{
-    background-color: #857c77;
-    color:rgb(54, 41, 9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 250px;
-    padding: 0 15rem;
     
 }
 
-.intro-text__textbox h3{
-    font-size: 2rem;
+.header h1 {
     text-transform: uppercase;
-    margin-bottom: 1rem;
-    
 }
 
-.packaging-image{
-    background-attachment: fixed;
-    background-image: url('../img/img_2.jpg');
+.image-container {   
+    clip-path: circle(50% at 50% 50%);
+    background-image: url('../img/profile1.jpg');
     background-size: cover;
     background-position: center;
     height: 450px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 450px;
+    margin: 2rem auto;  
 }
 
-.packaging-image__text a{
-    background-color: #46464e97;
-    border: 2px solid #697d74ad;
-    color:  #bebcb0;
+.navigation ul li {
+    border: 1px solid black;
+    border-radius: 5px;
     display: inline-block;
-    font-size: 3rem;
-    padding: 2rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: all 0.5s ease-in-out;
-}
-
-.packaging-image__text a:hover{
-    transform: scale(1.2);
-}
-
-.packaging-text{
-    background-color: #8e6f64;
-    color:rgb(48, 41, 35);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 250px;
-    padding: 0 15rem;
-}
-
-.packaging_text__textbox h3{
     font-size: 2rem;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
+    padding: 1rem;
+    width: 16rem;
+    margin: 3rem 0;
 }
 
-.tutorials-image{
-    background-attachment: fixed;
-    background-image: url('../img/img_3.jpg');
-    background-size: cover;
-    background-position: bottom;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.navigation ul li:not(:last-child) {
+    margin-right: 6rem;
 }
 
-.tutorials-image__text a{
-    background-color: #49495197;
-    border: 2px solid #6c8178ad;
-    color:  #b7af86;
-    display: inline-block;
-    font-size: 3rem;
-    padding: 2rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: all 0.5s ease-in-out;
+
+.main-container {
+    margin: 0 auto;
+    width: 75%;
 }
 
-.tutorials-image__text a:hover{
-    transform: scale(1.2);
+.main-container div {
+    margin-bottom: 2rem;
 }
 
-.footer{
-    height: 250px;
-    background-color: #604b41;
-    color: #2d2a29;
+.main-container h1 {
+    margin-bottom: 5rem;
+}
+
+.main-container p {
+    text-align: justify;
+}
+
+.footer {
     font-size: 2rem;
-    padding-top: 2rem;
+    padding: 2rem;
 }
 
-.footer ul li{
+.footer ul {
+    list-style: none;
+    margin-bottom: 3rem;
+}
+
+.footer ul li {
     display: inline-block;
-    margin: 1rem;
+    margin: 2rem;
 }
 
-.footer ul li a{
-    color: #867b76;
+.footer ul a {
+    color: #777;
     text-decoration: none;
 }
 
-.footer ul li:hover{
-    transform: scale(1.3);
+
+@media (min-width: 480px) {
+    /*muuda image-container taustapilti*/
+    /*muuda dokumendi taustavärvi*/
+    /*muuda dokumendi tekstivärvi*/
+    /*ära unusta ka raamjoonesid*/
+
+    .image-container {
+        background-image: url('../img/profile2.jpg');   
+    }
+
+    .container {
+        background-color: blanchedalmond;
+        color: rgb(96, 39, 19);
+        width: 100%;
+    }
+
+    .navigation ul li {
+        display: block;
+        border-color: rgb(96, 39, 19);
+        font-size: 1rem;
+        margin: 0;
+        width: 100%;
+    }
+    .navigation ul li:not(:last-child) {
+        border-bottom: none;
+    }
+    
+
+    .main-container {
+        padding: 0.75rem;
+        width: 100%;
+    }
+
+    .main-container h1 {
+        margin: 1rem auto;
+    }
+    
+}
+
+
+@media (min-width: 768px) {
+
+    /*muuda image-container taustapilti*/
+    /*muuda dokumendi taustavärvi*/
+    /*muuda dokumendi tekstivärvi*/
+    /*ära unusta ka raamjoonesid*/
+    
+    .image-container{
+        background-image: url('../img/profile3.jpg');   
+    }
+
+    .container {
+        background-color: rgb(202, 174, 178);
+        color: rgb(96, 39, 19);
+    }
+
+        .navigation ul li{
+            border-color: rgb(96, 39, 19);
+        }
+}
+
+
+@media (min-width: 1024px){
+        
+    /*muuda image-container taustapilti*/
+    /*muuda dokumendi taustavärvi*/
+    /*muuda dokumendi tekstivärvi*/
+    /*ära unusta ka raamjoonesid*/
+
+    .image-container{
+        background-image: url('../img/profile4.jpg');   
+    }
+
+    .container {
+        background-color: rgb(202, 174, 178);
+        color: rgb(96, 39, 19);
+    }
+
+        .navigation ul li{
+            border-color: rgb(96, 39, 19);
+        }
+}
+
+
+@media (min-width: 1200px){
+
+    /*muuda image-container taustapilti*/
+    /*muuda dokumendi taustavärvi*/
+    /*muuda dokumendi tekstivärvi*/
+    /*ära unusta ka raamjoonesid*/
+
+    .image-container{
+        background-image: url('../img/profile3.jpg');   
+    }
+
+    .container {
+        background-color: rgb(202, 174, 178);
+        color: rgb(96, 39, 19);
+    }
+
+        .navigation ul li{
+            border-color: rgb(96, 39, 19);
+        }
+
+    .header h1 {
+        margin: 3rem auto;
+    }
+    .navigation ul li {
+        display: inline-block;
+        width: 16rem;
+    }
+    
+    .navigation ul li:not(:last-child) {
+        border-bottom: 1px solid black;
+        margin-right: 4rem;
+    }
+
+    .main-container {
+        width: 75%;
+    }
+
 }
